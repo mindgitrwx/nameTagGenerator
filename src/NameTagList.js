@@ -1,8 +1,8 @@
-import React from 'react';
-import NameTag from './NameTag.js';
-import './styles.css';
+import React from "react";
+import NameTag from "./NameTag.js";
+import "./styles.css";
 
-var NameTagList = props => {
+var NameTagList = (props) => {
   var renderNameTag = (name, index) => (
     <NameTag
       name={name}
