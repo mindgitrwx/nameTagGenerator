@@ -40,16 +40,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Name Tag Generator (네임 태그 생성기!)</h1>
+        <h1>
+          <mark>Name Tag Generator</mark> (네임 태그 생성기!)
+        </h1>
 
         {/* two input box to add card name and color */}
 
         <UserInput addName={this.addName} />
         <UserInputColor addColor={this.addColor} />
 
-        <NameTagList names     ={this.state.names} 
-                     color     ={this.color} 
-                     removeName={this.removeName} />
+        <NameTagList
+          names={this.state.names}
+          color={this.color}
+          removeName={this.removeName}
+        />
       </div>
     );
   }
