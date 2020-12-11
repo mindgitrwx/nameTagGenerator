@@ -2,15 +2,17 @@ import React, { Component } from "react";
 
 class UserInput extends Component {
   state = {
-    nameAndColor: ""
+    name: "",
+    color: ""
   };
 
-  updateNameAndColor = (event) =>
-    this.setState({ nameAndColor: event.target.value });
+  updateName = (event) =>
+    this.setState({ name: event.target.value });
+
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.addName(this.state.nameAndColor.split(" ")[0]);
-    this.props.addColor(this.state.nameAndColor.split(" ")[1]);
+    this.props.addName(this.state.name);
+    //this.props.addColor(this.state.color);
     this.setState({ name: "" });
   };
 
@@ -19,9 +21,9 @@ class UserInput extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
-          placeholder="Add a new name, color pair here..."
-          value={this.state.nameAndColor}
-          onChange={this.updateNameAndColor}
+          placeholder="Add a name"
+          value={this.state.name}
+          onChange={this.updateName}
         />
         <input type="submit" value="Create Name Tag" />
       </form>

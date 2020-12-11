@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NameTagList from "./NameTagList.js";
 import UserInput from "./UserInput.js";
+import UserInputColor from "./UserInputColor.js";
 
 class App extends Component {
   state = {
@@ -39,9 +40,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Name Tag Generator</h1>
-        <UserInput addName={this.addName} addColor={this.addColor} />
-        <NameTagList names={this.state.names} removeName={this.removeName} />
+        <h1>Name Tag Generator (네임 태그 생성기!)</h1>
+
+        {/* two input box to add card name and color */}
+
+        <UserInput addName={this.addName} />
+        <UserInputColor addColor={this.addColor} />
+
+        <NameTagList names     ={this.state.names} 
+                     color     ={this.color} 
+                     removeName={this.removeName} />
       </div>
     );
   }
