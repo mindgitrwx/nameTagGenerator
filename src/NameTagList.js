@@ -4,10 +4,10 @@ import NameTag from "./NameTag.js";
 import "./styles.css";
 
 var NameTagList = (props) => {
-  var renderNameTag = (name,index) => (
+  var renderNameTag = (name,color,index) => (
     <NameTag
       name={name}
-      //color={color}
+      color={color}
       key={name}
       removeName={props.removeName}
       index={index}

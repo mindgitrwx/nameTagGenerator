@@ -26,7 +26,9 @@ class App extends Component {
 
   componentDidUpdate() {
     var savedNamesString = JSON.stringify(this.state.names);
+    var savedColorsString = JSON.stringify(this.state.colors);
     localStorage.setItem("savedNames", savedNamesString);
+    localStorage.setItem("savedColors", savedColorsString);
   }
 
   componentDidMount() {
